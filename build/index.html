@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="/build/img/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Style in CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="calDiv bg-light d-flex flex-column justify-content-center p-2">
+            <p>Scientific Calculator</p>
+            <textarea class="calDiv__inputField form-control shadow-none" id="input-field" wrap="soft" maxlength="40"
+                readonly="" placeholder="0"></textarea>
+            <div class="err-msg d-flex justify-content-center" id="err-msg" style="font-size: 22px;">
+
+            </div>
+            <div class="s1-buttons">
+                <div class="s1-r1 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-transparent jsrun angle" id="angle"
+                        value="deg">DEG</button>
+                    <button class="btn cal-btn border-none p-1 bg-transparent jsrun" title="f-e">F-E</button>
+                </div>
+                <div class="s1-r2 d-flex justify-content-center align-items-center ">
+                    <button class="btn cal-btn border-none p-1 bg-transparent jsrun" id="mc" disabled>MC</button>
+                    <button class="btn cal-btn border-none p-1 bg-transparent jsrun" id="mr" disabled>MR</button>
+                    <button class="btn cal-btn border-none p-1 bg-transparent jsrun" id="mpp">M+</button>
+                    <button class="btn cal-btn border-none p-1 bg-transparent jsrun" id="mm">M-</button>
+                    <button class="btn cal-btn border-none p-1 bg-transparent jsrun" id="ms">MS</button>
+                </div>
+            </div>
+            <div class="s2-fun">
+                <div class="s2-r1 d-flex ">
+                    <div class="dropdown">
+                        <a class="btn border-none p-1 bg-transparent dropdown-toggle" href="#" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            aria-expanded="false" style="margin-left: 15px; font-size: 14px;">
+                            <img src="./img/triangle.png" alt="trigonometry" height="15" width="15"> Trigonometry
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="d-flex">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <li><button class="dropdown-item jsrun" id="2nd">2<sup id="2nd">nd</sup></button>
+                                    </li>
+                                    <li><button class="dropdown-item jsrun" id="sin" title="sin">sinθ</button></li>
+                                    <li><button class="dropdown-item jsrun" id="cos" title="cos">cosθ</button></li>
+                                    <li><button class="dropdown-item jsrun" id="tan" title="tan">tanθ</button></li>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center">
+                                    <li><button class="dropdown-item jsrun" id="hyp">hyp</button></li>
+                                    <li><button class="dropdown-item jsrun" id="cosec" title="cosec">cosecθ</button>
+                                    </li>
+                                    <li><button class="dropdown-item jsrun" id="sec" title="sec">secθ</button></li>
+                                    <li><button class="dropdown-item jsrun" id="cot" title="cot">cotθ</button></li>
+                                </div>
+                            </div>
+
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <a class="btn border-none p-1 bg-transparent dropdown-toggle" href="#" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            aria-expanded="false" style="margin-left: 15px; font-size: 14px;">
+                            <strong>ƒ</strong> Function
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex justify-content-around">
+                                    <li><button class="dropdown-item Function jsrun" title="mx">⎢x ⎢</button></li>
+                                    <li><button class="dropdown-item Function jsrun" title="floor">⎣x⎦</button></li>
+                                    <li><button class="dropdown-item Function jsrun" title="frr">⎡x⎤</button></li>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <li><button class="dropdown-item Function jsrun" title="rand">rand</button></li>
+                                    <li><button class="dropdown-item Function jsrun" title="dms">→dms</button></li>
+                                    <li><button class="dropdown-item Function jsrun" title="toDeg"">→deg</button></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="s3-fun">
+                <div class="s3-r1 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="2ndSpecial-1">2<sup
+                            id="2ndSpecial-1">nd</sup></button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="3.14"
+                        style="font-family: none; font-size: 20px;">π</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="e">e</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="c">C</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" title="d-1">⌫</button>
+                </div>
+                <div class="s3-r2 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="x2" title="x2">x<sup
+                            title="x2">2</sup></button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" title="1/">1/x</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" title="mx">| x |</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" title="exp">exp</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="%">mod</button>
+                </div>
+                <div class="s3-r3 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="sqrt" title="sqrt">2√x</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="(">(</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id=")">)</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" title="!">n!</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="/" style="font-size: 20px;"><b
+                            id="/">÷</b></button>
+                </div>
+                <div class="s3-r4 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="**" title="**">x<sup
+                            title="**">y</sup></button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="7">7</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="8">8</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="9">9</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="*"><b id="*">x</b></button>
+                </div>
+                <div class="s3-r5 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="10x" title="10x">10<sup
+                            title="10x">x</sup></button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="4">4</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="5">5</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="6">6</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="-" style="font-size: 20px;"><b
+                            id="-">-</b></button>
+                </div>
+                <div class="s3-r4 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="log" title="log">log(x)</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="1">1</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="2">2</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="3">3</button>
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="+"><b id="+">+</b></button>
+                </div>
+                <div class="s3-r5 d-flex ">
+                    <button class="btn cal-btn border-none p-1 bg-col jsrun" id="in" title="in">in</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" title="mp">+/-</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id="0">0</button>
+                    <button class="btn cal-btn border-none p-1 bg-white jsrun" id=".">.</button>
+                    <button class="btn cal-btn border-none p-1 bg-cols jsrun" title="Eql" style="font-size: 20px;"><b title="Eql">=</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- JS For Calculator -->
+<script type="module" src="./JS/main-bundle.js" defer></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+
+</html>

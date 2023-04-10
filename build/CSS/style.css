@@ -1,0 +1,44 @@
+/* background color of full page  */
+.bg-col {
+    background-color: #f3f3f3 !important;
+}
+
+/* background color of equal to button (=)  */
+.bg-cols {
+    background-color: #4189dba9 !important;
+}
+
+/* Sizing of all buttons */
+.cal-btn {
+    margin: 3px;
+    height: 40px;
+    width: 66px;
+}
+
+/* Style of full calculator area */
+.calDiv {
+    height: 64vh;
+    width: 38vh;
+    box-shadow: 0rem 0rem 0.25rem 0.0625rem rgb(211, 208, 208);
+}
+
+/* Style of full display */
+.calDiv__inputField {
+    height: 4rem;
+    font-size: 2.4rem;
+    margin-top: 1rem;
+    text-align: right;
+    border: none;
+    resize: none;
+    background-color: #f8f9fa !important;
+}
+
+/* Size of error massage area */
+.err-msg {
+    height: 40px;
+}
+
+/* Style of function dropdown */
+.Function {
+    padding: 0.25rem 0.25rem;
+}
